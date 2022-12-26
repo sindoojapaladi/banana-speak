@@ -10,8 +10,8 @@ function errorHandler(error){
     alert("something wrong with server! try again later.. ")}
 
 function eventHandler(){
-    
-    fetch(getUrl(inputText.value))
+    var text=inputText.value
+    fetch(getUrl(text))
     .then(response => response.json())
     .then(json => { 
         var translatedText=json.contents.translated;
